@@ -1,0 +1,33 @@
+<view class="page__bd">
+  <view class="header">
+    <image class="head" src="{{headUrl}}" mode="{{mode}}"></image>
+  </view>
+  <view class='container'>
+    <view class="weui-cells__title">个人资料</view>
+    <view class="weui-cells weui-cells_after-title">
+      <view class="weui-cell">
+        <view class="weui-cell__bd">学号</view>
+        <view class="weui-cell__ft">{{studentInfo.studentNo}}</view>
+      </view>
+      <view class="weui-cell">
+        <view class="weui-cell__bd">姓名</view>
+        <view class="weui-cell__ft">{{studentInfo.studentName}}</view>
+      </view>
+      <view class="weui-cell">
+        <view class="weui-cell__bd">性别</view>
+        <view class="weui-cell__ft">{{studentInfo.sex}}</view>
+      </view>
+      <view class="weui-cell">
+        <view class="weui-cell__bd">学院</view>
+        <view class="weui-cell__ft">{{studentInfo.academy}}</view>
+      </view>
+      <view class="weui-cell">
+        <view class="weui-cell__bd">专业</view>
+        <view class="weui-cell__ft">{{studentInfo.major}}</view>
+      </view>
+    </view>
+  </view>
+  <view class="page__bd_spacing">
+    <button class="weui-btn" type="warn" bindtap="logout">退出登录</button>
+  </view>
+</view>

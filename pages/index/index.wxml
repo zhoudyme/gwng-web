@@ -1,0 +1,41 @@
+<import src="cell.wxml" />
+<view class='header'>
+  <view class="slide">
+    <swiper indicator-dots="{{indicatorDots}}" autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}">
+      <block wx:for="{{imgUrls}}" wx:key="image">
+        <swiper-item>
+          <image src="{{item}}" class="slide-image" model="aspectFit" />
+        </swiper-item>
+      </block>
+    </swiper>
+  </view>
+</view>
+<view class="pages-container">
+  <scroll-view scroll-y="true" class="pages-wrapper">
+    <view wx:for="{{pageItems}}" wx:key="{{text}}">
+      <view class="pages-row">
+        <template is="cell" data="{{...item[0],cellHeight}}" />
+        <template is="cell" data="{{...item[1],cellHeight}}" />
+        <template is="cell" data="{{...item[2],cellHeight}}" />
+      </view>
+    </view>
+  </scroll-view>
+  <block wx:for="{{today.info}}" wx:key="info_key" wx:for-item="info">
+      <view class="weui-panel">
+        <view class="weui-panel__hd">
+          <image style="height:32rpx;width:32rpx;vertical-align:middle;margin-right:16rpx;" src="/images/info_icon.png" />
+          <text>{{info.title}}</text>
+        </view>
+        <block wx:if="{{info.content}}">
+          <view class="weui-panel__bd">
+            <view class="weui-media-box weui-media-box_text">
+              <view class="weui-media-box__desc">
+                <text>{{info.content}}</text>
+              </view>
+            </view>
+          </view>
+        </block>
+      </view>
+    </block>
+    <view class="weui-footer weui-center">- 我是有底线的 -</view>
+</view>

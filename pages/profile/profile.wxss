@@ -1,0 +1,13 @@
+.header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.head {
+  height: 200rpx;
+  width: 200rpx;
+}
+
+.page__bd_spacing {
+  padding-top: 80rpx;
+}

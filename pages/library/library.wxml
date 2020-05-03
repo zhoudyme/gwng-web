@@ -1,0 +1,12 @@
+<view class="weui-panel">
+  <view class="weui-grids">
+    <navigator url="/pages/library/myLibrary/myLibrary" class="weui-grid" hover-class="weui-grid_active">
+      <image class="weui-grid__icon" src="../../assets/images/myLibrary.png" />
+      <view class="weui-grid__label">我的借阅</view>
+    </navigator>
+    <navigator url="/pages/library/schoolLibrary/schoolLibrary" class="weui-grid" hover-class="weui-grid_active">
+      <image class="weui-grid__icon" src="../../assets/images/myLibrary.png" />
+      <view class="weui-grid__label">图书馆藏</view>
+    </navigator>
+  </view>
+</view>

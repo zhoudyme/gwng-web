@@ -1,0 +1,33 @@
+<!--index.wxml-->
+<view class="header">
+  <image class="logo" src="{{logoUrl}}" mode="{{mode}}"></image>
+</view>
+<view class="container">
+  <form bindsubmit="loginForm">
+    <view class="weui-cell weui-cell_input">
+      <view class="weui-cell__hd">
+        <view class="weui-label">学号</view>
+      </view>
+      <view class="weui-cell__bd">
+        <input class="weui-input" name="studentNo" bindinput="studentNoInput"  placeholder="请输入学号" confirm-type="next" />
+      </view>
+    </view>
+    <view class="weui-cell weui-cell_input">
+      <view class="weui-cell__hd">
+        <view class="weui-label">密码</view>
+      </view>
+      <view class="weui-cell__bd">
+        <input password class="weui-input" name="password" bindinput="passwordInput" placeholder="请输入密码" confirm-type="done" />
+      </view>
+    </view>
+    <view class="weui-cells__tips textCenter">密码为数字南商密码，默认为身份证后6位</view>
+    <view class="page__bd_spacing login">
+      <button class="weui-btn" type="primary" formType="submit" bindtap="login">登录</button>
+    </view>
+  </form>
+  <view class="page__bd page__bd_spacing">
+    <view class="weui-footer">
+      <view class="weui-footer__text">Copyright © 2018 zhoudy.</view>
+    </view>
+  </view>
+</view>

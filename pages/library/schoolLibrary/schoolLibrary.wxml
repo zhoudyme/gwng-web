@@ -1,0 +1,40 @@
+<view class="page__hd">
+  <image class="weui-media-box__thumb" src="../../../assets/images/book.png" />
+  <view class="page__title">图书馆藏</view>
+  <view class="page__desc">借阅排行榜排名为本月前10名</view>
+</view>
+<view class="page__bd">
+  <view class="weui-cells">
+    <view class="weui-cell weui-cell_input">
+      <view class="weui-cell__hd">
+        <view class="weui-label">书名</view>
+      </view>
+      <view class="weui-cell__bd">
+        <input class="weui-input" placeholder="例如：追风筝的人" value="{{bookName}}" bindinput="bookNameInput" />
+      </view>
+    </view>
+  </view>
+  <view class="button-sp-area">
+    <button bindtap="search" class="weui-btn" type="primary" plain="true">查询书籍</button>
+  </view>
+  <view class="weui-panel" wx:if="{{bookListInfo}}">
+    <view class="weui-panel__hd">借阅排行榜</view>
+    <view class="weui-panel__bd">
+      <navigator url="detail/detail?bookId={{book.bookId}}" class="weui-media-box weui-media-box_appmsg" hover-class="weui-cell_active" wx:for="{{bookListInfo}}" wx:key="*this" wx:for-item="book">
+        <view class="weui-media-box__hd weui-media-box__hd_in-appmsg">
+          {{index + 1}}
+        </view>
+        <view class="weui-media-box__bd weui-media-box__bd_in-appmsg">
+          <view class="weui-media-box__title">{{book.bookName}}</view>
+          <view class="weui-media-box__desc">{{book.author}}</view>
+        </view>
+        <view class="weui-media-box__bd weui-media-box__bd_in-appmsg">
+          <view class="zan-capsule zan-capsule" style="float:right;">
+            <view class="zan-capsule__left">{{book.borrowCount}}</view>
+            <view class="zan-capsule__right">借阅次数</view>
+          </view>
+        </view>
+      </navigator>
+    </view>
+  </view>
+</view>

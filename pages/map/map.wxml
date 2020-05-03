@@ -1,0 +1,2 @@
+<!--pages/map/map.wxml-->
+<web-view src="http://web.gwng.edu.cn:8080/360gwng/index.html"></web-view>

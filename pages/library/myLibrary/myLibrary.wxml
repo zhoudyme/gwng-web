@@ -1,0 +1,23 @@
+<view class="weui-tab__content">
+  <block wx:for="{{bookList}}" wx:for-item="i" wx:key="index">
+    <view class="weui-media-box weui-media-box_text">
+      <view class="weui-media-box__title weui-media-box__title_in-text">第{{index+1}}本</view>
+      <view class="weui-media-box__info">
+        <text class="weui-media-box__bold">书名/作者：{{i.bookName}}\n</text>
+        <text class="weui-media-box__bold">所在馆：{{i.library}}\n</text>
+        <text class="weui-media-box__bold">借阅时间：{{i.borrowBooksTime}}\n</text>
+        <text class="weui-media-box__bold">应还时间：{{i.returnBooksTime}}\n</text>
+        <text class="weui-media-box__bold">已续借数：{{i.renewCount}}\n</text>
+        <text class="weui-media-box__bold">最大续借数：{{i.maxRenewCount}}\n</text>
+        <block wx:if="{{i.overdue == '否'}}">
+          <text class="weui-media-box__bold" style="display:inline-block">是否过期：</text>
+          <text style="color:#5DAC81">{{i.overdue}}\n</text>
+        </block>
+        <block wx:else>
+          <text class="weui-media-box__bold" style="display:inline-block">是否过期：</text>
+          <text style="color:#D0104C">{{i.overdue}}\n</text>
+        </block>
+      </view>
+    </view>
+  </block>
+</view>

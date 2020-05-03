@@ -1,0 +1,11 @@
+/* 首页九宫格的单元格模板cell.wxml */
+<template name="cell">
+  <navigator url="{{route}}" class="pages-item" style="height:{{cellHeight}}">
+    <view class="{{text==null||text.length==0?'pages-icon-wrapper-no-bg':'pages-icon-wrapper'}}">
+      <image src="{{icon}}" class="pages-icon"></image>
+    </view>
+    <view class="pages-text-wrapper">
+      <text class="pages-text">{{text}}</text>
+    </view>
+  </navigator>
+</template>

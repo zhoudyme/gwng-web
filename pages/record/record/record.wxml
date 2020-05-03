@@ -1,0 +1,16 @@
+<view class="page__bd">
+  <view class="weui-cells__title">成绩详情</view>
+  <view class="weui-cells weui-cells_after-title">
+    <block wx:for="{{recordInfo}}" wx:for-item="i" wx:key="index">
+      <view class="weui-cell" bindtap="powerDrawer" data-statu="open">
+        <view class="weui-cell__bd">{{i.courseName}}</view>
+        <block wx:if="{{i.courseScore < 60}}">
+          <view class="weui-cell__ft" style="color:#D0104C">{{i.courseScore}}</view>
+        </block>
+        <block wx:else>
+          <view class="weui-cell__ft">{{i.courseScore}}</view>
+        </block>
+      </view>
+    </block>
+  </view>
+</view>

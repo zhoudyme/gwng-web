@@ -1,0 +1,50 @@
+{
+  "pages": [
+    "pages/login/login",
+    "pages/index/index",
+    "pages/profile/profile",
+    "pages/map/map",
+    "pages/table/table",
+    "pages/detail/detail",
+    "pages/record/index",
+    "pages/record/record/record",
+    "pages/card/card",
+    "pages/library/library",
+    "pages/library/myLibrary/myLibrary",
+    "pages/library/schoolLibrary/schoolLibrary",
+    "pages/library/schoolLibrary/detail/detail",
+    "pages/library/schoolLibrary/search/search",
+    "pages/attendance/attendance",
+    "pages/phone/phone",
+    "pages/electives/index",
+    "pages/electives/electives/electives"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#F8F8F8",
+    "navigationBarTitleText": "我在南商",
+    "navigationBarTextStyle": "black"
+  },
+  "tabBar": {
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "text": "首页",
+        "iconPath": "assets/images/home.png",
+        "selectedIconPath": "assets/images/home-actived.png"
+      },
+      {
+        "pagePath": "pages/profile/profile",
+        "text": "个人",
+        "iconPath": "assets/images/profile.png",
+        "selectedIconPath": "assets/images/profile-actived.png"
+      }
+    ]
+  },
+  "networkTimeout": {
+    "request": 10000,
+    "connectSocket": 10000
+  },
+  "debug": true,
+  "sitemapLocation": "sitemap.json"
+}

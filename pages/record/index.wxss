@@ -1,0 +1,66 @@
+.rest {
+  font-size: 30rpx;
+  padding: 30rpx;
+  width: 100%;
+  border-bottom: 1px #d1e1fb solid;
+  text-align: center;
+}
+
+.idx {
+  font-size: 30rpx;
+  color: #43b0d1;
+  width: 20rpx;
+  padding: 10rpx;
+}
+
+.weui-bold {
+  font-size: 20rpx;
+  font-weight: bold;
+}
+
+text + .weui-bold {
+  display: block;
+  padding-top: 20rpx;
+}
+
+.button{
+  margin-bottom: 80rpx;
+}
+
+.button-sp-area {
+  padding: 30rpx 35rpx;
+}
+
+button[type="primary"][plain] {
+  color: #fff;
+  border: 1px solid #96deda;
+  background-image: linear-gradient(-45deg, #96deda 0%, #8ec5fc 100%);
+}
+
+.button-hover[type="primary"][plain] {
+  color: #fff;
+  border-color: #96deda;
+  opacity: 0.6;
+}
+
+button[type="default"][plain] {
+  color: #fff;
+  border: 1px solid #fbc2eb;
+  background-image: linear-gradient(-45deg, #fbc2eb 0%, #a6c1ee 100%);
+}
+
+.button-hover[type="default"][plain] {
+  color: #fff;
+  border-color: #fbc2eb;
+  opacity: 0.6;
+}
+
+.hide {
+  display: none;
+}
+
+.show {
+  display: flex;
+  margin-top: 50rpx;
+  justify-content: center;
+}

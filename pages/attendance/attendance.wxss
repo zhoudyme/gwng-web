@@ -1,0 +1,35 @@
+page, .page, .page__bd {
+  height: 100%;
+  background-color: #f8f8f8;
+}
+
+.weui-media-box__title {
+  color: #43b0d1;
+  font-size: 26rpx;
+}
+
+.weui-media-box {
+  padding: 20rpx;
+  margin-top: 20rpx;
+  position: relative;
+  background-color: #fff;
+}
+
+.weui-media-box__info {
+  color: #000;
+  line-height: 1.6;
+}
+
+.weui-media-box__bold {
+  font-size: 30rpx;
+  /* font-weight: bolder; */
+}
+
+text + .weui-media-box__bold {
+  display: block;
+  padding-top: 40rpx;
+}
+
+.weui-media-box:before {
+  content: none;
+}

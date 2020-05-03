@@ -1,0 +1,23 @@
+<view>
+  <block wx:for="{{attendanceInfo}}" wx:for-item="i" wx:key="index">
+    <view class="weui-media-box weui-media-box_text">
+      <view class="weui-media-box__info">
+        <text class="weui-media-box__bold">课程：{{i.courseName}}\n</text>
+        <text class="weui-media-box__bold">教室：{{i.classRoom}}\n</text>
+        <text class="weui-media-box__bold">点名时间：{{i.checkInTime}}\n</text>
+        <block wx:if="{{i.state == '已到'}}">
+          <text class="weui-media-box__bold" style="display:inline-block">状态：</text>
+          <text style="color:#5DAC81">{{i.state}}\n</text>
+        </block>
+        <block wx:elif="{{i.state == '迟到'}}">
+          <text class="weui-media-box__bold" style="display:inline-block">状态：</text>
+          <text style="color:#F6C555">{{i.state}}\n</text>
+        </block>
+        <block wx:else>
+          <text class="weui-media-box__bold" style="display:inline-block">状态：</text>
+          <text style="color:#D0104C">{{i.state}}\n</text>
+        </block>
+      </view>
+    </view>
+  </block>
+</view>

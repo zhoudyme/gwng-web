@@ -1,0 +1,38 @@
+/**index.wxss**/
+
+page {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.header {
+  margin-top: 80rpx;
+  margin-bottom: 80rpx;
+}
+
+.logo {
+  width: 250rpx;
+  height: 250rpx;
+}
+
+.textCenter {
+  text-align: center;
+}
+
+.weui-cells__tips {
+  margin-top: 30rpx;
+}
+
+.login {
+  margin-top: 50rpx;
+}
+
+ .weui-footer{
+    color: #888;
+  font-size: 14px;
+  margin-top: 250rpx;
+}
+ .weui-footer_fixed-bottom{
+    margin-bottom: 0;
+}  

@@ -1,0 +1,44 @@
+<view class="page__bd">
+  <view class='container'>
+    <view class="weui-cells__title">校园卡信息</view>
+    <view class="weui-cells weui-cells_after-title">
+      <view class="weui-cell">
+        <view class="weui-cell__bd">卡号</view>
+        <view class="weui-cell__ft">{{campusCardInfo.studentNo}}</view>
+      </view>
+      <view class="weui-cell">
+        <view class="weui-cell__bd">卡状态</view>
+        <block wx:if="{{campusCardInfo.state!= '正常'}}">
+          <view class="weui-cell__ft" style="color:#D0104C">{{campusCardInfo.state}}</view>
+        </block>
+        <block wx:else>
+          <view class="weui-cell__ft">{{campusCardInfo.state}}</view>
+        </block>
+      </view>
+      <view class="weui-cell">
+        <view class="weui-cell__bd">卡余额</view>
+        <block wx:if="{{campusCardInfo.balance >= 30}}">
+          <view class="weui-cell__ft">{{campusCardInfo.balance}}</view>
+        </block>
+        <block wx:elif="{{campusCardInfo.balance > 0 && campusCardInfo.balance < 30}}">
+          <view class="weui-cell__ft" style="color:#F6C555">{{campusCardInfo.balance}}</view>
+        </block>
+        <block wx:else>
+          <view class="weui-cell__ft" style="color:#D0104C">{{campusCardInfo.balance}}</view>
+        </block>
+      </view>
+      <view class="weui-cell">
+        <view class="weui-cell__bd">昨日消费</view>
+        <view class="weui-cell__ft">{{campusCardInfo.yesterdayConsume}}</view>
+      </view>
+      <view class="weui-cell">
+        <view class="weui-cell__bd">一周消费</view>
+        <view class="weui-cell__ft">{{campusCardInfo.weekConsume}}</view>
+      </view>
+      <view class="weui-cell">
+        <view class="weui-cell__bd">统计结束时间</view>
+        <view class="weui-cell__ft">{{campusCardInfo.endTime}}</view>
+      </view>
+    </view>
+  </view>
+</view>

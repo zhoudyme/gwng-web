@@ -1,0 +1,51 @@
+<view class="page__bd">
+  <view class='container'>
+    <view class="weui-cells__title">个人信息</view>
+    <view class="weui-cells weui-cells_after-title">
+      <view class="weui-cell">
+        <view class="weui-cell__bd">学号</view>
+        <view class="weui-cell__ft">{{studentInfo.studentNo}}</view>
+      </view>
+      <view class="weui-cell">
+        <view class="weui-cell__bd">姓名</view>
+        <view class="weui-cell__ft">{{studentInfo.studentName}}</view>
+      </view>
+      <view class="weui-cell">
+        <view class="weui-cell__bd">性别</view>
+        <view class="weui-cell__ft">{{studentInfo.sex}}</view>
+      </view>
+      <view class="weui-cell">
+        <view class="weui-cell__bd">学院</view>
+        <view class="weui-cell__ft">{{studentInfo.academy}}</view>
+      </view>
+      <view class="weui-cell">
+        <view class="weui-cell__bd">专业</view>
+        <view class="weui-cell__ft">{{studentInfo.major}}</view>
+      </view>
+      <view class="weui-cell">
+        <view class="weui-cell__bd">学制</view>
+        <view class="weui-cell__ft">{{studentInfo.schoolingLength}}</view>
+      </view>
+      <view class="weui-cell">
+        <view class="weui-cell__bd">学籍状态</view>
+        <view class="weui-cell__ft">{{studentInfo.studentStatus}}</view>
+      </view>
+      <view class="weui-cell">
+        <view class="weui-cell__bd">是否在校</view>
+        <view class="weui-cell__ft">{{studentInfo.inSchool}}</view>
+      </view>
+      <view class="weui-cell">
+        <view class="weui-cell__bd">入学日期</view>
+        <view class="weui-cell__ft">{{studentInfo.enrollmentDate}}</view>
+      </view>
+      <view class="weui-cell">
+        <view class="weui-cell__bd">以修学分</view>
+        <view class="weui-cell__ft">{{studentInfo.actualCredits}}</view>
+      </view>
+      <view class="weui-cell">
+        <view class="weui-cell__bd">应修学分</view>
+        <view class="weui-cell__ft">{{studentInfo.creditsOnGraduation}}</view>
+      </view>
+    </view>
+  </view>
+</view>

@@ -1,0 +1,22 @@
+<view class="weui-cells__title">选择</view>
+<view class="weui-cell weui-cell_select">
+  <view class="weui-cell__hd weui-cell__hd_in-select-after">
+    <view class="weui-label">学年</view>
+  </view>
+  <view class="weui-cell__bd">
+    <picker bindchange="bindYearChange" value="{{yearIndex}}" range="{{years}}">
+      <view class="weui-select weui-select_in-select-after">{{years[yearIndex]}}</view>
+    </picker>
+  </view>
+</view>
+<view class="weui-cell weui-cell_select">
+  <view class="weui-cell__hd weui-cell__hd_in-select-after">
+    <view class="weui-label">学期</view>
+  </view>
+  <view class="weui-cell__bd">
+    <picker bindchange="bindTermChange" value="{{termIndex}}" range="{{terms}}">
+      <view class="weui-select weui-select_in-select-after">{{terms[termIndex]}}</view>
+    </picker>
+  </view>
+</view>
+<button class="weui-btn button" type="primary" bindtap="queryElectivesInfo">查询</button>

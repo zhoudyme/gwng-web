@@ -1,0 +1,35 @@
+<view class="page__hd">
+  <image class="weui-media-box__thumb" src="../../../../assets/images/book.png" />
+  <view class="weui-media-box__title" style="font-size:40rpx;font-weight:bolder;color:#fff;">{{book.bookName}}</view>
+  <view class="page__desc" style="font-size:30rpx;">{{book.author}}</view>
+  <view class="page__desc" style="color:#f8f8f8;;">{{book.describe}}</view>
+</view>
+<view class="weui-panel" wx:if="{{book.holding}}">
+  <view class="weui-panel__hd">馆藏信息</view>
+  <view class="weui-panel__bd">
+    <block wx:for="{{book.holding}}" wx:key="*this" wx:for-item="book">
+      <view class="weui-media-box weui-media-box_appmsg">
+        <view class="weui-media-box__hd weui-media-box__hd_in-appmsg">
+          {{index + 1}}
+        </view>
+        <view class="weui-media-box__bd weui-media-box__bd_in-appmsg">
+          <view class="weui-media-box__title">{{book.accessionNumber}}</view>
+          <view class="weui-media-box__desc">{{book.library}}</view>
+          <view class="weui-media-box__desc" wx:if="{{book.returnBooksTime}}">{{book.returnBooksTime}} 应还</view>
+        </view>
+        <view class="weui-media-box__bd weui-media-box__bd_in-appmsg">
+          <view class="zan-capsule zan-capsule" style="float:right;">
+          <block wx:if="{{book.state == '借出'}}">
+            <view class="zan-capsule__left">借出</view>
+            <view class="zan-capsule__right">书刊状态</view>
+          </block>
+          <block wx:else>
+            <view class="zan-capsule__left" style="background:#43B0D1;border-color:#43B0D1">{{book.state}}</view>
+            <view class="zan-capsule__right" style="color:#43B0D1;border-color:#43B0D1">书刊状态</view>
+          </block>
+          </view>
+        </view>
+      </view>
+    </block>
+  </view>
+</view>

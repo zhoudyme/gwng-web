@@ -1,0 +1,14 @@
+<view class="weui-tab__content">
+  <block wx:for="{{electivesInfo}}" wx:for-item="i" wx:key="index">
+    <view class="weui-media-box weui-media-box_text">
+      <view class="weui-media-box__info">
+        <text class="weui-media-box__bold">课程名称：{{i.courseName}}\n</text>
+        <text class="weui-media-box__bold">课程性质：{{i.courseProperty}}\n</text>
+        <text class="weui-media-box__bold">教师姓名：{{i.teacher}}\n</text>
+        <text class="weui-media-box__bold">课程学分：{{i.courseCredit}}\n</text>
+        <text class="weui-media-box__bold">上课时间：{{i.schoolTime}}\n</text>
+        <text class="weui-media-box__bold">上课地点：{{i.classroom}}\n</text>
+      </view>
+    </view>
+  </block>
+</view>
